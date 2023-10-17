@@ -48,7 +48,7 @@ Another aspect of the research will delve into the development of adaptive, cont
 
 The anticipated outcome of this research is a set of versatile, low complexity algorithms for QRS complex and arrhythmia detection, which can be effectively implemented on low power, low cost microcontroller platforms. These solutions have the potential to significantly impact the field of remote health monitoring, enabling the development of affordable, wearable devices capable of providing real-time, accurate cardiac health assessments to a wider population.
 
-## Abstract
+<!--## Abstract-->
 
 ## Related works
 
@@ -146,6 +146,7 @@ Step 4: Two-stage CSNN classifier
 
 - [Project Repository]((https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/))
 - [Project Page](https://cepdnaclk.github.io/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/)
+- [Project Progress Presentation](/docs/data/mid%20evaluation.pdf)
 - [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
 - [University of Peradeniya](https://eng.pdn.ac.lk/)
 
