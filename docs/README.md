@@ -146,7 +146,7 @@ Step 4: Two-stage CSNN classifier
 
 - [Project Repository]((https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/))
 - [Project Page](https://cepdnaclk.github.io/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/)
-- [Project Progress Presentation](/docs/data/mid%20evaluation.pdf)
+- [Project Progress Presentation](data/mid%20evaluation.pdf)
 - [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
 - [University of Peradeniya](https://eng.pdn.ac.lk/)
 
