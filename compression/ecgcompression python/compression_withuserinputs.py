@@ -37,11 +37,11 @@ def pwm(y,STEP):
   diffVal = y - yresampled
   cumError = cumError + diffVal
 
-  if cumError > STEP:
+  if cumError > STEP and yresampled + STEP < (1<<11):
       yresampled = yresampled + STEP
       cumError = cumError - STEP
 
-  if cumError < (-1 * STEP):
+  if cumError < (-1 * STEP) and yresampled - STEP > 0:
       yresampled = yresampled - STEP
       cumError = cumError + STEP
 
