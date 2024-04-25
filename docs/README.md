@@ -86,49 +86,57 @@ Even though SNN-based methods show a significant improvement in energy consumpti
 
 
 ## Methodology
-![method](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/73728629/6e420e94-e3d9-4d9e-ad95-1a881c8b8a9b)
+[//]: <!--![method](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/73728629/6e420e94-e3d9-4d9e-ad95-1a881c8b8a9b)-->
 
-
-Step 1: Signal denoising
-- Band-passed filter
-- Moving average filter
-
-Step 2: Signal segmentation
-- Multi-peak segmentation with 8-sec window size
-- Get the highest severity annotation of the segmentation as the class
-  
-Step 3: Spike generation
-- Delta modulation with adaptive thresholding to convert ECG signals into sparse event-based representations
-
-Step 4: Two-stage CSNN classifier
-1. Two-class CSNN classification
-   * SCNN model to classify the ECG signal into Normal/Abnormal classes
-2. four-class CSNN classification
-   * SCNN model to classify the Abnormal category coming from stage 1 to further 4 abnormal arrhythmia classes
-
-  
+Develop low complexity algorithms for the five main tasks in an arrhythmia classification system for a resource-constrained environment are
+1. Detecting the QRS peaks in the incoming signal
+2. Segment the signal based on the R peaks detected
+3. Identify suspected beats
+4. Compress and transmit the suspected beats to a server
+5. Perform a more accurate classification off the edge device
+     
 ## Experiment Setup and Implementation
 
-### Progress So Far
-![Screenshot 2023-06-28 012450](https://github.com/SashiniLiyanage/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/73728629/24e7fa49-ecec-431b-b565-afca068de797)
+### QRS Complex Detection and Segmentation
+![image](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/71621792/c3123bd3-675c-433d-ab48-5a8d0ec4ec0d)
 
-### ECG Segmentation
-![Screenshot 2023-06-28 012545](https://github.com/SashiniLiyanage/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/73728629/bc214368-c538-43a3-95ff-3031ad113c96)
+![image](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/71621792/453a738d-34db-403e-aab5-6bbc791b649a)
 
-### ECG Compression
-![Screenshot 2023-06-28 012652](https://github.com/SashiniLiyanage/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/73728629/50a3eb65-252e-4bbd-b6d6-be65f68794a5)
+![image](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/71621792/aa80b832-d8d3-40c5-aa3d-93c1a2be9161)
+
+
+### ECG Segment Compression
+![image](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/71621792/59b1da2e-d283-4bef-a58d-accf15205ce9)
+
 
 ### ECG Classification
-![Screenshot 2023-06-28 012737](https://github.com/SashiniLiyanage/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/73728629/3ba260e7-1819-49ae-8ffb-941203e61f41)
+![image](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/71621792/dcf85147-a069-4719-9d14-9fee423787e8)
+
+![image](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/71621792/412bfd6d-3a0d-4707-9af5-f91208300c2e)
+![image](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/71621792/c94f30c5-5f88-4616-a01a-620f44a36f96)
 
 
 ## Results and Analysis
 
-### Precisions of ECG class prediction
-![Screenshot 2023-06-28 012802](https://github.com/SashiniLiyanage/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/73728629/e4e1b804-6154-43ea-ae24-7cfe9a886627)
+![image](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/71621792/3e5c951a-dddd-4f68-9d2c-6edc83918ff0)
+
+![image](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/71621792/e8b7a5bd-1ffc-48d4-a58f-1220434d7cca)
+
+![image](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/71621792/92c66c3b-176d-4a02-90a5-ebb3920d2a1e)
+![image](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/71621792/36478770-7c3b-4568-a415-60a3e21bc25b)
+
+![image](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/71621792/de6672c4-b249-4fdc-9348-fb76337e0161)
+![image](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/71621792/1e408d49-d445-45fc-936e-d837378a7bf7)
+
+![image](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/71621792/3d5bd0ea-f3e4-47b4-ba34-a3d456631f76)
+
+
+
 
 
 ## Conclusion
+![image](https://github.com/cepdnaclk/e17-4yp-Low-Complexity-Algorithm-for-Arrhythmia-Detection/assets/71621792/9b01b6c3-8853-4789-bf8c-0931d6aa9a96)
+
 
 ## Publications
 [//]: # "Note: Uncomment each once you uploaded the files to the repository"
